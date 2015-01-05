@@ -32,6 +32,7 @@ var ajsl = {
 		var count = 0;
 		for (var i in layer){
 			var element = document.createElement("script");
+			element.type = "text/javascript";
 			element.src = layer[i];
 			document.body.appendChild(element);
 			element.addEventListener('load', function(){
