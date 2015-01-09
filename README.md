@@ -12,7 +12,7 @@ Tells ajsl that supplied script paths should be loaded asyncronously after previ
 **Returns:** Does not return.
 
 #### ajsl.load()
-Starts loading scripts in order they were added. Scripts added through one `addLayer()` call are loaded asyncronously.
+Starts loading scripts added with `ajsl.addLayer()`. Scripts added with one common `ajsl.addLayer()` call are loaded asyncronously.
 
 **Parameters:** None.
 
