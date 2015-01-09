@@ -3,6 +3,20 @@ ajsl
 
 **ajsl** (Asynchronous JavaScript loader) is a JavaScipt tool for asynchronous loading of JavaScript files with dependancies.
 
+### API
+#### ajsl.addLayer(scriptPath,...)
+Tells ajsl that supplied script paths should be loaded asyncronously after previously added scripts are loaded.
+
+**Parameters:** Any number of strings representing script paths to download.
+
+**Returns:** Does not return.
+
+#### ajsl.load()
+Starts loading scripts in order they were added. Scripts added through one `addLayer()` call are loaded asyncronously.
+
+**Parameters:** None.
+
+**Returns:** Does not return.
 
 ### Usage
 Add the following `<script>` element to the bottom of `<body>` element, just before `</body>` tag. Replace `// Insert ajsl definition here.` with ajsl definition from `ajsl.js` file in this repository. Set up your load rules under `// Set up load layers here.` using ajsl.addLayer() function.
