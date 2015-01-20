@@ -18,22 +18,6 @@ Starts loading scripts added with `ajsl.addLayer()`. Scripts added with one comm
 
 **Returns:** Does not return.
 
-### Usage
-Add the following `<script>` element to the bottom of `<body>` element, just before `</body>` tag. Replace `// Insert ajsl definition here.` with ajsl definition from `ajsl.js` file in this repository. Set up your load rules under `// Set up load layers here.` using ajsl.addLayer() function.
-
-```html
-<script>
-    window.addEventListener('load', function() {
-        // Insert ajsl definition here.
-    
-        // Set up load layers here.
-    
-        ajsl.load();
-    });
-    
-</script>
-```
-
 ### Example
 Here is an example of handling dependencies with ajsl. Lets assume `scriptA.js` and `scriptB.js` are independent, `scriptC.js` depends either on `scriptA.js` or on `scriptB.js`, and `main.js` depends on all mentioned above.
 ```html
@@ -55,4 +39,4 @@ Here is an example of handling dependencies with ajsl. Lets assume `scriptA.js` 
 </html>
 
 ```
-As page is ready, `scriptA.js` and `scriptB.js` will be asyncronously loaded first. After both are ready, `scriptC.js` will be loaded as it depends on at least one of them. Finally `main.js`, which depends on all other scripts, will be loaded.
+As page is ready, `scriptA.js` and `scriptB.js` will be asyncronously loaded first. After both are ready, `scriptC.js` will be loaded as it depends on at least one of `scriptA.js` and `scriptB.js`. Finally `main.js`, which depends on all other scripts, will be loaded.
